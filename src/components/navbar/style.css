@@ -1,0 +1,139 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  
+  /* Navbar Styling */
+  nav {
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f7c08a; /* Elegant accent color */
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-menu li {
+    margin-left: 20px;
+    position: relative;
+  }
+  
+  .nav-menu li a {
+    font-size: 1rem;
+    padding: 10px 15px;
+    color: #f4f4f9;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu li a:hover {
+    color: #f7c08a;
+  }
+  
+  /* Special buttons */
+  .login a, .signup a {
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .login a {
+    background-color: #f4f4f9;
+    color: black;
+  }
+  
+  .signup a {
+    background-color: #f7c08a;
+    color: #333;
+  }
+  
+  .login a:hover {
+    background-color: black;
+    color: #f4f4f9;
+  }
+  
+  .signup a:hover {
+    background-color: #333;
+    color: #f7c08a;
+  }
+  
+  /* Toggle Button */
+  .btn-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #f7c08a;
+    cursor: pointer;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    display: none;
+    color: #f4f4f9;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100%;
+      width: 60%;
+      background-color: #333;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: right 0.3s ease;
+    }
+  
+    .nav-menu.show {
+      right: 0;
+    }
+  
+    .nav-menu li {
+      margin: 20px 0;
+    }
+  
+    .btn-toggle {
+      display: block;
+    }
+  
+    .close-btn {
+      display: block;
+    }
+  }
